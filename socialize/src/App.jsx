@@ -4,6 +4,7 @@ import Shop from './Shop';
 import NavBar from './NavBar';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from './Homepage';
+import Category from './Category';
 function App() {
   const routes= [{
     path: '/',
@@ -13,6 +14,14 @@ function App() {
       {
         path: '/home',
         element: <Homepage />,
+      },
+      {
+        path: '/category/:name',
+        element: <Category/>,
+      },
+      {
+        path: '/home/shop/:id',
+        element: <Shop />,
       }
     ]
   }];
